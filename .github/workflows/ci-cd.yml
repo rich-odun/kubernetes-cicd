@@ -46,7 +46,8 @@ jobs:
       - name: Update GitOps repository
         shell: bash
         env:
-          GIT_TOKEN: ${{ secrets.GITOPS_PAT }}
+          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GIT_TOKEN: ${{ secrets.GITOPS_PAT }}
           IMAGE: ${{ steps.login-ecr.outputs.registry }}/${{ env.REPOSITORY }}:${{ github.sha }}
         run: |
           # Configure git credential store
