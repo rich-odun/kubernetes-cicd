@@ -73,4 +73,4 @@ jobs:
           git commit -m "Update image to ${{ github.sha }}"
           
           # Push
-          git push -f https://${GIT_TOKEN}@github.com/rich-odun/grade-api-gitops.git main
+          git push -f https://x-access-token:${GIT_TOKEN}@github.com/rich-odun/grade-api-gitops.git main
